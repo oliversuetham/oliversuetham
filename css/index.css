@@ -1,0 +1,193 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+@-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; } 
+}
+@-moz-keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1; }
+}
+@-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeOut{
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+div.splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: #fff;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+div.splash.active{
+    display: flex;
+    pointer-events: all;
+
+    -webkit-animation: fadeOut 3s ease-in-out;
+}
+
+div.splash .a1{
+    background: blue;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2rem;
+    height: 2rem;
+}
+
+div.splash.logo{
+
+}
+
+div.splash .a2{
+    background: red;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 2rem;
+    height: 2rem;
+}
+
+div.main-start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /*-webkit-animation: fadeIn 3s ease-in-out;
+    -moz-animation: fadeIn 3s ease-in-out;
+    -o-animation: fadeIn 3s ease-in-out;
+    animation: fadeIn 3s ease-in-out;*/
+}
+
+.main-start .logo {
+    margin-top: 5rem;
+}
+
+.main-start .logo img {
+    max-width: 22rem;
+}
+
+.main-start .modalStart {
+    position: fixed;
+    bottom: 0;
+    width: 94%;
+    min-height: 9rem;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #ffb900;
+    border-top-left-radius: 3.4rem;
+    border-top-right-radius: 3.4rem;
+}
+
+.modalStart p:first-child {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+.modalStart p {
+    margin: 0.2rem;
+}
+
+.modalStart .footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0.4rem;
+}
+
+.footer button {
+    margin: 0.4rem 0.4rem 0.4rem 0rem;
+    padding: 0.4rem;
+    border: none;
+    border-radius: 1rem;
+    width: 6rem;
+    height: 2.3rem;
+}
+
+.footer button.cad {
+    background: #000;
+    color: #fff;
+}
+
+.modalLogin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 97%;
+    height: 98%;
+    background: #ffb900;
+    padding: 0.4rem;
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modalLogin h1 {
+    margin: 2.5rem 0rem 0rem 0.4rem;
+}
+
+.modalLogin p {
+    margin: 0rem 0rem 0rem 0.4rem;
+}
+
+.modalLogin.active {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modalLogin .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modalContent {
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    min-height: 28rem;
+    border-top-left-radius: 3.4rem;
+    border-top-right-radius: 3.4rem;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 98%;
+    padding: 2.6rem 0.2rem 0.2rem 0.2rem;
+}
+
+.modalLogin .modalContent input {
+    width: 88%;
+    height: 2rem;
+    margin: 0.4rem;
+    background: #e7f0f3;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.2rem;
+}
